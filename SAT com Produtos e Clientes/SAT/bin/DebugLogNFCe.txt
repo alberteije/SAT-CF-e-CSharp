@@ -1,0 +1,34 @@
+06/02/2016 19:51:47:	System.Exception: Nenhum objeto nfeProc encontrado no arquivo C:\T2Ti\SAT\XML\RETORNO_53160210793118000178650010004570221004570226.xml!
+   em NFe.Utils.FuncoesXml.ObterNodeDeArquivoXml(String nomeDoNode, String arquivoXml) na c:\Componentes\C#\Zeus\NFe.Utils\FuncoesXml.cs:linha 169
+   em ExtNfeProc.CarregarDeArquivoXml(nfeProc nfeProc, String arquivoXml) na c:\Componentes\C#\Zeus\NFe.Utils\NFe\ExtNfeProc.cs:linha 47
+   em NFCe.View.Caixa.ConcluiEncerramentoVenda() na c:\Projetos\T2Ti ERP 2.0\C#\Frente de Caixa\SAT\View\Caixa.cs:linha 1270
+15/06/2016 13:22:43:	NHibernate.Exceptions.GenericADOException: could not insert: [NFCe.DTO.ProdutoDTO][SQL: INSERT INTO produto (ID_UNIDADE_PRODUTO, GTIN, CODIGO_INTERNO, NCM, NOME, DESCRICAO, DESCRICAO_PDV, VALOR_COMPRA, VALOR_VENDA, PRECO_VENDA_MINIMO, PRECO_SUGERIDO, CUSTO_MEDIO_LIQUIDO, PRECO_LUCRO_ZERO, PRECO_LUCRO_MINIMO, PRECO_LUCRO_MAXIMO, MARKUP, QUANTIDADE_ESTOQUE, QUANTIDADE_ESTOQUE_ANTERIOR, ESTOQUE_MINIMO, ESTOQUE_MAXIMO, ESTOQUE_IDEAL, EXCLUIDO, INATIVO, DATA_CADASTRO, IMAGEM, EX_TIPI, CODIGO_LST, CLASSE_ABC, IAT, IPPT, TIPO_ITEM_SPED, PESO, PORCENTO_COMISSAO, PONTO_PEDIDO, LOTE_ECONOMICO_COMPRA, ALIQUOTA_ICMS_PAF, ALIQUOTA_ISSQN_PAF, TOTALIZADOR_PARCIAL, CODIGO_BALANCA, DATA_ALTERACAO, TIPO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);SELECT LAST_INSERT_ID()] ---> MySql.Data.MySqlClient.MySqlException: Field 'ID_SUBGRUPO' doesn't have a default value
+   em MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   em MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int32& insertedId)
+   em MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int32& insertedId)
+   em MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   em MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   em MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   em MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   em NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   em NHibernate.Id.IdentityGenerator.InsertSelectDelegate.ExecuteAndExtract(IDbCommand insert, ISessionImplementor session)
+   em NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em NFCe.NHibernate.NHibernateDAL`1.SaveOrUpdate[T](T objeto) na c:\Projetos\C#\SAT com Produtos e Clientes\SAT\NHibernate\NHibernateDAL.cs:linha 41
+   em NFCe.Controller.ProdutoController.GravaPoduto(ProdutoDTO pProduto) na c:\Projetos\C#\SAT com Produtos e Clientes\SAT\Controller\ProdutoController.cs:linha 157
+15/06/2016 13:32:02:	NHibernate.Exceptions.GenericADOException: could not insert: [NFCe.DTO.ProdutoDTO][SQL: INSERT INTO produto (ID_UNIDADE_PRODUTO, GTIN, ID_SUBGRUPO, CODIGO_INTERNO, NCM, NOME, DESCRICAO, DESCRICAO_PDV, VALOR_COMPRA, VALOR_VENDA, PRECO_VENDA_MINIMO, PRECO_SUGERIDO, CUSTO_MEDIO_LIQUIDO, PRECO_LUCRO_ZERO, PRECO_LUCRO_MINIMO, PRECO_LUCRO_MAXIMO, MARKUP, QUANTIDADE_ESTOQUE, QUANTIDADE_ESTOQUE_ANTERIOR, ESTOQUE_MINIMO, ESTOQUE_MAXIMO, ESTOQUE_IDEAL, EXCLUIDO, INATIVO, DATA_CADASTRO, IMAGEM, EX_TIPI, CODIGO_LST, CLASSE_ABC, IAT, IPPT, TIPO_ITEM_SPED, PESO, PORCENTO_COMISSAO, PONTO_PEDIDO, LOTE_ECONOMICO_COMPRA, ALIQUOTA_ICMS_PAF, ALIQUOTA_ISSQN_PAF, TOTALIZADOR_PARCIAL, CODIGO_BALANCA, DATA_ALTERACAO, TIPO) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);SELECT LAST_INSERT_ID()] ---> MySql.Data.MySqlClient.MySqlException: Data too long for column 'IAT' at row 1
+   em MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   em MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int32& insertedId)
+   em MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int32& insertedId)
+   em MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   em MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   em MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   em MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   em NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   em NHibernate.Id.IdentityGenerator.InsertSelectDelegate.ExecuteAndExtract(IDbCommand insert, ISessionImplementor session)
+   em NHibernate.Id.Insert.AbstractReturningDelegate.PerformInsert(SqlCommandInfo insertSQL, ISessionImplementor session, IBinder binder)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em NFCe.NHibernate.NHibernateDAL`1.SaveOrUpdate[T](T objeto) na c:\Projetos\C#\SAT com Produtos e Clientes\SAT\NHibernate\NHibernateDAL.cs:linha 41
+   em NFCe.Controller.ProdutoController.GravaPoduto(ProdutoDTO pProduto) na c:\Projetos\C#\SAT com Produtos e Clientes\SAT\Controller\ProdutoController.cs:linha 157
